@@ -38,7 +38,7 @@ def active_site(ligands, distance, model):
     chains = model.child_dict
     for group in ligands.values():
         for ligand_res in group:
-            print ligand_res.resname, ligand_res.id[1]
+            print "ligand residue: "+ligand_res.resname, ligand_res.id[1]
             for c in chains:
                 for protein_res in chains[c].child_list:
                     if protein_res not in group:
